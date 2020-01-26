@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link href="/css/demo.css" rel="stylesheet" type="text/css">
+    <link href="/css/buttons-si.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <h1>Tu perfil</h1>
+    <p>
+        <% if (user.photos) { %>
+        <img src="<%= user.photos[0].value %>" /><br />
+        <% } %>
+        Name: <%= user.displayName %><br />
+        ID: <%= user.id %><br />
+        <% if (user.phoneNumber) { %>
+        PhoneNumber: <%= user.phoneNumber.value %><br />
+        <% } %>
+        <% if (user.photoURL) { %>
+        PhotoURL: <%= user.photoURL.value %><br />
+        <% } %>
+        <% if (user.emails) { %>
+        Email: <%= user.emails[0].value %><br />
+        <% } %>
+        PROVEEDOR: <strong><%= user.provider %></strong><br />
+
+    </p>
+    <a href="/">Ir a página de inicio</a>
+
+</body>
+
+</html>
